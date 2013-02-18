@@ -1,4 +1,3 @@
-
 public class ListPriorityQueue {
   int[] queue; 
   int headIndex; 
@@ -11,6 +10,7 @@ public class ListPriorityQueue {
   }
   
   public int removeSmallest() {
+    
     if(headIndex != tailIndex) { 
       int r = queue[headIndex]; 
       queue[headIndex] = 0; 
@@ -23,6 +23,7 @@ public class ListPriorityQueue {
   }
   
     public int insert(int elem) { 
+      
     	if(headIndex == tailIndex) {
     		queue[headIndex] = elem; 
     		tailIndex = nextIndex(tailIndex);   		
@@ -48,6 +49,7 @@ public class ListPriorityQueue {
     	//If full, double array size. 
     	if(tailIndex == headIndex)
     		doubleArray();
+        
     	return elem; 
     }
     
@@ -70,8 +72,7 @@ public class ListPriorityQueue {
     }
     
     private int prevIndex(int i) { 
-    	i--; 
-     	if(i == -1)
+     	if(i-- == -1)
     		return queue.length - 1; 
     	return i; 
     }

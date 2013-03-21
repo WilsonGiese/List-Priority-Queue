@@ -1,7 +1,7 @@
 public class ListPriorityQueue {
-  int[] queue; 
-  int headIndex; 
-  int tailIndex; //Tail points to next empty
+  private int[] queue; 
+  private int headIndex; 
+  private int tailIndex; //Tail points to next empty
   
   public ListPriorityQueue(int initialSize) { 
     this.queue = new int[initialSize]; 
